@@ -1,0 +1,24 @@
+/* Body Styles */
+
+body {
+	background-color: lightgray;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Header Styles */
+
+header {
+	background-color: rgb(20, 20, 20);
+}
+
+img#logo {
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+}
+
+/* Body Styles */
+
+
+/* Nav Styles */

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<!--
+M. Cook
+2/7/21
+ll_bespoke.html
+!-->
+
+<html>
+<head>
+	<title>Luther's Luthiers</title>
+	<meta charset="utf-8">
+	<link href="ll_reset.css" rel="stylesheet">
+	<link href="ll_layout.css" rel="stylesheet" />
+
+	<script src="ll_cart.js" defer></script>
+</head>
+<body>
+	<header>
+		<img id="logo" src="ll_logo.png"/>
+
+		<nav id="horiNav">
+			<ul id="mainMenu">
+				<li>
+					<a href="">Home</a>
+				</li>
+				<li>
+					<a href="">Services</a>
+				</li>
+				<li>
+					<a href="">Custom Shop</a>
+				</li>
+				<li>
+					<a href="">About Us</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+		<img src="ll_7string.jpg" />
+		<form method="post">
+			<fieldset id="general_options">
+				<legend>General</legend>
+				<div class="form_row">
+					<!-- <label>Dominant Hand</label> -->
+					<div class="opt_group">
+						<label for="lefty">Left-Handed</label>
+						<input type="radio" id="lefty" value="left" name="Hand" checked/><br/>
+						<label for="righty">Right-Handed</label>
+						<input type="radio" id="righty" value="right" name="Hand"/>
+					</div>
+				</div>
+
+				<div class="form_row">
+					<label>Number of Strings</label><br/>
+					<select name="strings" id="strings">
+						<option value="six">Six</option>
+						<option value="seven">Seven (+$100)</option>
+						<option value="eight">Eight (+$200)</option>
+						<option value="nine">Nine (+$300)</option>
+						<option value="ten">Ten (+$400)</option>
+					</select>
+					
+				<div class="form_row">
+					<label>Construction Method</label>
+					<select name="construction" id="construction">
+						<option value="bolt_on">Bolt-On</option>
+						<option value="set_neck">Set Neck (+$100)</option>
+						<option value="neck_thru">Neck Through (+$300)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Scale Length</label>
+					<select name="scale" id="scale">
+						<option value="24">24.75"</option>
+						<option value="25">25"</option>
+						<option value="25.5">25.5"</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<fieldset id="body_options">
+				<legend>Body</legend>
+				<div class="form_row">
+					<label>Wood</label>
+					<select name="wood" id="wood">
+						<option value="mahogany">Mahogany</option>
+						<option value="alder">Alder</option>
+						<option value="ash">Ash</option>
+						<option value="basswood">Basswood</option>
+						<option value="swamp_ash">Swamp Ash</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Sunburst</label>
+					<select name="sunburst" id="sunburst">
+						<option value="no">No</option>
+						<option value="yes">Yes (+$25)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Construction</label>
+					<select name="body_type" id="body_type">
+						<option value="solid">Solid</option>
+						<option value="hollow">Hollow-body (+$250)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Pickguard</label>
+					<select name="pickguard" id="pickguard">
+						<option value="no">No</option>
+						<option value="yes">Yes (+$25)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Neck Pickup</label>
+					<select name="n_pickup" id="n_pickup">
+						<option value="none">None</option>
+						<option value="coil">Single Coil</option>
+						<option value="hum">Humbucker</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Middle Pickup</label>
+					<select name="m_pickup" id="m_pickup">
+						<option value="none">None</option>
+						<option value="coil">Single Coil</option>
+						<option value="hum">Humbucker</option>
+					</select>
+				</div>				
+
+				<div class="form_row">
+					<label>Bridge Pickup</label>
+					<select name="b_pickup" id="b_pickup">
+						<option value="none">None</option>
+						<option value="coil">Single Coil</option>
+						<option value="hum">Humbucker</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Finish</label><br/>
+					<select name="b_finish" id="b_finish">
+						<option value="matte">Matte</option>
+						<option value="satin">Satin</option>
+						<option value="gloss">Gloss</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Tremolo Arm</label>
+					<select name="whammy" id="whammy">
+						<option value="no">No</option>
+						<option value="yes">Yes (+$150)</option>
+					</select>
+			</fieldset>
+
+			<fieldset id="neck_options">
+				<legend>Neck</legend>
+
+				<div class="form_row">
+					<label>Wood</label>
+					<select name="neck_wood" id="neck_wood">
+						<option value="maple">Maple</option>
+						<option value="mahogany">Mahogany</option>
+						<option value="ebony">Ebony (+$50)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Fanned Frets</label>
+					<select name="fanned_frets" id="fanned_frets">
+						<option value="no">No</option>
+						<option value="yes">Yes (+$100)</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Fretless</label>
+					<select name="fretless" id="fretless">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Fret Inlay</label>
+					<select name="fret_inlay" id="fret_inlay">
+						<option value="none">None</option>
+						<option value="center">Center Dots (+$20)</option>
+						<option value="traps">Trapezoids (+$20)</option>
+						<option value="fins">Shark Fins (+$20)</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<fieldset id="headstock_options">
+				<legend>Headstock</legend>
+
+				<div class="form_row">
+					<label>Shape</label>
+					<select name="head_shape" id="head_shape">
+						<option value="gibson">Gibson</option>
+						<option value="fender">Fender</option>
+						<option value="classical">Classical</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Angled Head</label>
+					<select name="angled_head" id="angled_head">
+						<option value="no">No</option>
+						<option value="yes">Yes</option>
+					</select>
+				</div>
+
+				<div class="form_row">
+					<label>Locking Tuners</label>
+					<select name="tuners" id="tuners">
+						<option value="no">No</option>
+						<option value="yes">Yes (+$50)</option>
+					</select>
+				</div>
+			</fieldset>
+
+			<fieldset id="contact">
+				<legend>Contact Information (required)</legend>
+				<label for="firstBox">First Name</label>
+				<input name="fName" id="firstBox" type="text" required/>
+
+				<label for="lastBox">Last Name</label>
+				<input name="lName" id="lastBox" type="text" required />
+
+				<label for="streetBox">Street Address</label>
+				<input name="street" id="streetBox" type="text" required />
+
+				<label for="streetBox2">Street Address (2)</label>
+				<input name="street2" id="streetBox2" type="text" />
+
+				<label for="cityBox">City</label>
+				<input name="city" id="cityBox" type="text" required />
+
+				<label for="stateBox">State</label>
+				<input name="state" id="stateBox" type="text" 
+					list="stateList" required />
+				<datalist id="stateList">
+
+					<option value="AL">AL</option>
+					<option value="AK">AK</option>
+					<option value="AZ">AZ</option>
+					<option value="AR">AR</option>
+					<option value="CA">CA</option>
+					<option value="CO">CO</option>
+					<option value="CT">CT</option>
+					<option value="DE">DE</option>
+					<option value="FL">FL</option>
+					<option value="GA">GA</option>
+					<option value="HI">HI</option>
+					<option value="ID">ID</option>
+					<option value="IL">IL</option>
+					<option value="IN">IN</option>
+					<option value="IA">IA</option>
+					<option value="KS">KS</option>
+					<option value="KY">KY</option>
+					<option value="LA">LA</option>
+					<option value="ME">ME</option>
+					<option value="MD">MD</option>
+					<option value="MA">MA</option>
+					<option value="MI">MI</option>
+					<option value="MN">MN</option>
+					<option value="MS">MS</option>
+					<option value="MO">MO</option>
+					<option value="MT">MT</option>
+					<option value="NE">NE</option>
+					<option value="NV">NV</option>
+					<option value="NH">NH</option>
+					<option value="NJ">NJ</option>
+					<option value="NM">NM</option>
+					<option value="NY">NY</option>
+					<option value="NC">NC</option>
+					<option value="ND">ND</option>
+					<option value="OH">OH</option>
+					<option value="OK">OK</option>
+					<option value="OR">OR</option>
+					<option value="PA">PA</option>
+					<option value="RI">RI</option>
+					<option value="SC">SC</option>
+					<option value="SD">SD</option>
+					<option value="TN">TN</option>
+					<option value="TX">TX</option>
+					<option value="UT">UT</option>
+					<option value="VT">VT</option>
+					<option value="VA">VA</option>
+					<option value="WA">WA</option>
+					<option value="WV">WV</option>
+					<option value="WI">WI</option>
+					<option value="WY">WY</option>
+				</datalist>
+
+				<label for="zipBox">ZIP/Postal Code</label>
+				<input name="zip" id="zipBox" type="text"
+					pattern="^\d{5}(\-\d{4})?$" />
+
+				<label for="countryBox">Country</label>
+				<input name="country" id="countryBox" type="text" 
+					value="United States" required />
+
+				<label for="phoneBox">Phone</label>
+				<input name="phone" id="phoneBox" type="tel"
+					pattern="^\d{10}$|^((\d{3})\s*)?\d{3}[\s-]?\d{4}$" required />
+
+				<label for="emailBox">Email</label>
+				<input name="email" id="emailBox" type="email" required />
+
+				<div class="form_row">
+					<label>What's the best method of getting in contact?</label>
+					<fieldset class="opt_group">
+						<label for="phone_contact">Phone</label>
+						<input name="contact" id="phone_contact" value="phone" type="radio">
+						<label for="email_contact">Email</label>
+						<input name="contact" id="email_contact" value="email" type="radio">
+					</fieldset>
+				</div>
+			</fieldset>
+
+		</form>
+	</section>
+
+	<section id="price_nav">
+		<div id="nav_buttons">
+			<button id="previous" type="button">
+				<p>Previous</p>
+			</button>
+			<button id="next" type="button">
+				<p>Next</p>
+			</button>
+			<button id="submit" type="button">
+				<p>Submit</p>
+			</button>
+		</div>
+
+		<div id="price">
+			<h2>Subtotal:</h2>
+			<p id="subtotal"></p>
+		</div>
+	</section>
+
+	<section id="thanks">
+		<p id="gracias"> Thank you for placing your order </p>
+		<p>One of our luthiers will contact you shortly so we can go over any
+			last details and finalize your order. 
+	</section>
+	<footer>
+		<p>Copyright 2021 Luther's Luthiers</p>
+	</footer>
+</body>
+</html>

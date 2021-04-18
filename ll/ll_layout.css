@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+/*
+M. Cook
+2/7/2021
+ll_layout.css
+
+*/
+
+/* Body Layout */
+
+body {
+	background-color: lightgray;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 10px 0px 10px gray,
+		-10px 0px 10px gray;
+}
+
+body section img {
+	width: 100%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: black;
+}
+
+#intro_spiel img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#intro_spiel p, #intro_spiel h1, #intro_spiel h3 {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#intro_spiel h1 {
+	font-size: 1.5em;
+}
+
+#intro_spiel h3 {
+	font-size: 1.3em;
+}
+
+#musica {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Header Layout */
+
+header {
+	background-color: black;
+}
+
+header img#logo {
+	width: 35%;
+	margin: 0px auto;
+	display: block;
+}
+
+#horiNav, #mainMenu > * {
+	background-color: black;
+	float: left;
+}
+
+
+/* Main Menu Styles */
+
+#horiNav {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#mainMenu {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#mainMenu li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+#mainMenu:after {
+	content: "";
+	display: none;
+	clear: both;
+	height: 0px;
+
+}
+
+header a {
+	color: white;
+}
+
+/* Footer Styles*/
+
+footer {
+	background-color: rgb(135, 135, 135);
+}
+
+footer p {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* Form Styles */
+
+form {
+	/*width: 45%;*/
+	margin-top: 10px;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+}
+
+form:after {
+	content: "";
+	display: none;
+	clear: both;
+	height: 0px;	
+}
+
+div.form_row {
+	width: auto;
+}
+
+.form_row label, .form_row select, .form input {
+	margin: 5px;
+}
+
+.form_row label {
+	float: left;
+	font-size: 1em;
+}
+
+.form_row select, .form input {
+	float: right;
+	clear: right;
+}
+
+fieldset {
+	background: white;
+	border: none;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#neck_options, #headstock_options, #contact {
+	display: none;
+}
+
+#contact {
+	margin: auto;
+	width: 50%;
+}
+
+#contact label {
+	display: block;
+	float: left;
+	clear: both;
+}
+
+input {
+	display: block;
+	float: right;
+	clear: right;
+}
+
+/* Form layout */
+
+legend {
+   background-color: rgb(32, 32, 32);
+   color: white;
+   font-size: 1.2em;
+   border-top-right-radius: 10px;
+   border-top-left-radius: 10px;
+   margin-bottom: 10px;
+   padding: 8px;
+   width: 100%;
+}
+
+#thanks {
+	display: none;
+}
+
+#thanks p {
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1em;
+	width: 80%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+#thanks p:first-of-type {
+	font-size: 1.2em;
+}
+
+/* Input and Label Styles */
+
+label {
+   display: block;
+   float: left;
+   clear: left;
+   font-size: 0.9em;
+   margin-bottom: 10px;
+   margin-right: 10px;
+   width: 180px;
+}
+
+.optgroup * {
+	float: right;
+	clear: both;
+}
+
+/* Price Display Styles */
+#price_nav {
+	margin: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#price_nav h2, #price_nav p {
+	font-size: 1.3em;
+	margin: 4px;
+}
+
+/*  Button Styles */
+
+#nav_buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+   font-size: 1em;
+   margin: 5px;
+}
+
+#submit {
+	display: none;
+}
+
+/* YouTube video styles */
+#ba {
+	margin-left: auto;
+	margin-right: auto;
+}
