@@ -1,0 +1,3 @@
+[submodule "odin-recipes"]
+	path = odin-recipes
+	url = git@github.com:cookm353/odin-recipes.git
