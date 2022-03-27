@@ -5,3 +5,15 @@
   margin: 10px;
   display: inline-block;
 }
+
+#game {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  justify-content: center;
+  width: 90%;
+}
+
+body > h1, body > p {
+  color: white;
+}

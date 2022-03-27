@@ -11,11 +11,13 @@ const COLORS = [
   "green",
   "orange",
   "purple",
+  "yellow",
   "red",
   "blue",
   "green",
   "orange",
-  "purple"
+  "purple", 
+  "yellow",
 ];
 
 // here is a helper function to shuffle an array
@@ -109,25 +111,49 @@ function handleCardClick(event) {
       localStorage.bestScore = clickCount
       bestScore.innerText = `Best Score: ${localStorage.bestScore}`
     }
+  
+    // clickCount = 0
+    // clickCountDisplay.innerText = `Score: ${clickCount}`
   }
 }
 
 // when the DOM loads
 createDivsForColors(shuffledColors);
 
+// Restart game
 resetBttn.addEventListener("click", function(e) {
   for (let card of document.querySelectorAll(".flipped, .matched")) {
     card.style.backgroundColor = ""
     card.classList.remove("flipped")
     card.classList.remove("matched")
   }
+  
   cardsFlipped = []
+  clickCount = 0
+  clickCountDisplay.innerText = `Score: ${clickCount}`
 })
 
+// Page load event
 document.addEventListener("DOMContentLoaded", function() {
+  // Set best score
   if (localStorage.bestScore) {
     bestScore.innerText = `Best Score: ${localStorage.bestScore}`
   } else {
     localStorage.bestScore = ""
   }
 })
+
+// Make elements fade in 
+setTimeout(function() {
+  const title = document.querySelector("h1")
+  title.style.color = "black"
+  title.style.transition = "all 1s"
+}, 1000)
+
+setTimeout(function() {
+  const scores = document.querySelectorAll("body > p")
+  for (let score of scores) {
+    score.style.color = "black"
+    score.style.transition = "all 1s"
+  }
+}, 2000)
